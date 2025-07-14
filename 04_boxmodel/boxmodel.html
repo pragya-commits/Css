@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoxModel</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6px;
+        padding: 20px;
+      }
+      .box-model-demo {
+        width: 300px;
+        height: 200px;
+        padding: 20px;
+        border: 5px solid #333;
+        margin: 30px;
+        background-color: #f0f0f0;
+      }
+      .content-box {
+        box-sizing: content-box;
+        background-color: #ffcccc;
+      }
+      .border-box {
+        box-sizing: border-box;
+        background-color: #ccffcc;
+      }
+      .box-model-demo p {
+        margin: 0;
+      }
+      .highlight {
+        background-color: yellow;
+        display: inline-block;
+      }
+      .inline-example {
+        display: block;
+        background-color: #cce6ff;
+        padding: 10px;
+        margin: 10px;
+        /* inline elements ignore width and height */
+        width: 200px;
+        height: 100px;
+      }
+      .block-example {
+        background-color: #ffccff;
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Height:200px(including padding and border)</p>
+    </div>
+    <h2>Inline vs Block Elements</h2>
+    <p>
+      This is a paragraph with an<span class="inline-example"
+        >Inside .inline elements only take up as much width as necessary and
+        allow other elements next to them.</span
+      >
+    </p>
+    <div class="block-example">
+      This is a block-level Element.it takes up the full width available and
+      creates a new line before and after it.
+    </div>
+  </body>
+</html>
